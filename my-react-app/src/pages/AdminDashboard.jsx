@@ -185,7 +185,7 @@ const CoursesDashboard = () => {
     ))}
   </div>
 
-  {/* Add Course Modal */}
+  
   {isAddModalOpen && (
     <div className="popup-overlay">
       <div className="popup-content-wrapper">
@@ -252,7 +252,7 @@ const CoursesDashboard = () => {
     </div>
   )}
 
-  {/* Edit Course Modal */}
+
   {isEditModalOpen && (
     <div className="popup-overlay">
       <div className="popup-content-wrapper">

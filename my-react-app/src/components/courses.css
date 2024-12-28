@@ -79,7 +79,7 @@
     margin: 0 12px 12px;
   }
   
-  /* Tablet screens - 2 cards per row */
+ 
   @media (max-width: 992px) {
     .courses-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -91,7 +91,7 @@
     }
   }
   
-  /* Mobile screens - 1 card per row */
+
   @media (max-width: 576px) {
     .courses-grid {
       grid-template-columns: 1fr;

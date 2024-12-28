@@ -12,7 +12,7 @@ const pool = mysql.createPool({
     keepAliveInitialDelay: 0
 });
 
-// Test connection and handle errors
+
 pool.promise().query('SELECT 1')
     .then(() => console.log('Database connected successfully'))
     .catch(err => {

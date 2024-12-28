@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json()); 
 app.use(cors());
 
-// Route setup
+
 app.use('/api/courses', courseRoutes);
 const path = require('path');
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -20,7 +20,7 @@ if (!require('fs').existsSync(uploadDir)) {
     require('fs').mkdirSync(uploadDir);
 }
 
-// Global error handler
+
 app.use((err, req, res, next) => {
   console.error(err.message);
   res.status(500).json({ error: 'Server error' });

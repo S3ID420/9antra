@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Create course
+
 router.post('/', upload.single('image'), async (req, res) => {
   try {
     const { title, price } = req.body;
@@ -30,7 +30,7 @@ router.post('/', upload.single('image'), async (req, res) => {
   }
 });
 
-// Read all courses
+
 router.get('/', async (req, res) => {
   try {
     const [results] = await db.query('SELECT * FROM courses');
@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Update course
+
 router.put('/:id', upload.single('image'), async (req, res) => {
   try {
     const { id } = req.params;
@@ -65,7 +65,7 @@ router.put('/:id', upload.single('image'), async (req, res) => {
   }
 });
 
-// Delete course
+
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
